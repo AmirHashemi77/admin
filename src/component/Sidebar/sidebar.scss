@@ -1,0 +1,95 @@
+$purple-color:#6439ff;
+@mixin title {
+    
+        font-size: 10px;
+        font-weight: bold;
+        color: #999;
+        margin-top: 15px;
+        margin-bottom: 5px;
+    
+}
+.sidebar{
+    background-color: white;
+    min-height: 100vh;
+    border-right: 0.5px solid rgb(230, 227, 227);
+    flex: 1;
+
+        .top{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 0.5px solid rgb(230, 227, 227);
+                    .logo{
+                        font-size: 20px;
+                        color: #6439ff;
+                        font-weight: bold;
+                    }
+        }
+        .center{
+            padding: 10px;
+            border-bottom: 0.5px solid rgb(230, 227, 227);
+
+            .title{
+               @include title()
+            }
+            ul{
+                
+                display: flex;
+                flex-direction: column;
+                
+                
+                
+                list-style-type: none;
+
+                .item{
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    margin: 3px 0;
+                    padding: 2px 5px;
+                    border-radius: 5px;
+                    transition: all .5s;
+                    width: 100%;
+                   &:hover{
+                    background-color: #ece8ff;
+                   } 
+                    .icon{
+                        font-size: 20px;
+                        color: #7451f8;
+                    }
+                    p{
+                        font-size: 13px;
+                        font-weight: 600;
+                        color: #888;
+                        margin-left: 10px;
+                    }
+                }
+
+            }
+
+        }
+
+        .bottom{
+           padding: 10px;
+
+            .title{
+                @include title()
+            }
+
+            button{
+                width: 25px;
+                height: 25px;
+                border-radius: 4px;
+                border: 1px solid #555;
+                margin: 5px;
+            }
+            .dark-btn{
+                background-color: #000 ;
+            }
+            .white-btn{
+                background-color: #fff;
+            }
+        }
+}
+
