@@ -40,7 +40,7 @@ const Navbar = () => {
                             <Menu className='icon'/>
                         </li>
                         <li>
-                            <img src='img/1.jpg' alt='profil'/>
+                            <img src='/img/1.jpg' alt='profil'/>
                         </li>
                         <li>
                             <SettingsOutlined className='icon'/>
