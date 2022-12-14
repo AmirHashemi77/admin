@@ -14,7 +14,7 @@ const Single = () => {
                     <div className='left'>
                         <h4>Information</h4>
                         <div className='info-wrapper'>
-                            <img src="/img/1.jpg" alt="profile" />
+                            {/* <img  src="/img/1.jpg" alt="profile" /> */}
                             <div className='info'>
                                 <h6>Jane Doe</h6>
                                 <p>Email : <span>janedeo@example.com</span></p>
@@ -26,7 +26,7 @@ const Single = () => {
                         <button>Edit</button>
                     </div>
                     <div className='right'>
-                        <Chart aspect={5/1} title='Last 6 Mounth'/>
+                        <Chart aspect={4/1} title='Last 6 Mounth'/>
                     </div>
                 </div>
                 <div className='bottom '>

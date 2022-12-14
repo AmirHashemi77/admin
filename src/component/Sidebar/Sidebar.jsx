@@ -1,21 +1,22 @@
 import { CreditCardOutlined, Dashboard, InsertChart, Inventory, Logout, Notifications, PersonOutlineOutlined, Settings, LocalShipping } from '@mui/icons-material';
 import React from 'react';
 import "./sidebar.scss"
+import { Link } from 'react-router-dom';
 const Sidebar = () => {
     return (
         <div className='sidebar'>
             <div className='top'>
-                <h1 className='logo'>lamadin</h1>
+                <Link to='/' className='logo'>lamadin</Link>
             </div>
             
             <div className='center'>
                 <div>
                     <h4 className='title'>MAIN</h4>
                             <ul>
-                                <li className='item'>
+                                <Link to='/' className='item'>
                                 <Dashboard className='icon'/>
                                 <p>Dashboard</p>
-                                </li>
+                                </Link>
                                 
                             </ul>
 
@@ -23,10 +24,10 @@ const Sidebar = () => {
                 <div>
                     <h4 className='title'>LISTS</h4>
                             <ul>
-                                <li className='item'>
+                                <Link to="/user" className='item'>
                                 <PersonOutlineOutlined className='icon'/>
                                 <p>User</p>
-                                </li>
+                                </Link>
                                 <li className='item'>
                                 <Inventory className='icon'/>
                                 <p>Products</p>
