@@ -1,8 +1,13 @@
 import { CreditCardOutlined, Dashboard, InsertChart, Inventory, Logout, Notifications, PersonOutlineOutlined, Settings, LocalShipping } from '@mui/icons-material';
-import React from 'react';
+import React, { useContext } from 'react';
 import "./sidebar.scss"
 import { Link } from 'react-router-dom';
+import context from '../../context/context';
 const Sidebar = () => {
+const ctx=useContext(context)
+
+console.log(ctx);
+
     return (
         <div className='sidebar'>
             <div className='top'>
@@ -99,8 +104,8 @@ const Sidebar = () => {
             </div>
             <div className='bottom'>
             <h4 className='title'>THEME</h4>
-                <button className='white-btn'></button>
-                <button className='dark-btn'></button>
+                <button onClick={()=>ctx.setdarkmode(false)} className='white-btn'></button>
+                <button onClick={()=>ctx.setdarkmode(true)} className='dark-btn'></button>
             </div>
         </div>
     );

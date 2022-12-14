@@ -26,6 +26,7 @@ const DataTable = () => {
         <div className='dataTable'>
                 <DataGrid
                     rows={userRows}
+                    className="datagrid"
                     columns={userColumns.concat(actionColumn)}
                     pageSize={9}
                     rowsPerPageOptions={[5]}
